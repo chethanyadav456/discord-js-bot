@@ -6,7 +6,8 @@
 # Discord-js-v13-handler
 
 An advanced discord.js v13 command/events handler.
-  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/chethanyadav456/discord-js-v13-handler)
+  
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/chethanyadav456/discord-js-v13-handler)
 [![Run on Repl.it](https://repl.it/badge/github/chethanyadav456/discord-js-v13-handler)](https://repl.it/github/chethanyadav456/discord-js-v13-handler)
 [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/chethanyadav456/discord-js-v13-handler)
 
