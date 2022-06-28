@@ -19,24 +19,7 @@ module.exports = {
           content: `Only <@801478547893387345> can use this command!`
         }).catch(() => {});
         }
-        const player = interaction.client.manager.get(interaction.guildId);
-
-        if (SlashCommands.player && !player) {
-          await interaction.editReply({
-                    content: `There is no player for this guild.`
-                }).catch(() => {});
-        }
-        if (SlashCommands.inVoiceChannel && !interaction.member.voice.channel) { 
-          await interaction.editReply({
-          content: `You must be in a voice channel!`
-        }).catch(() => {});
-        }
-        if (SlashCommands.sameVoiceChannel && interaction.member.voice.channel !== interaction.guild.me.voice.channel) { 
-           await interaction.editReply({
-                    content: `You must be in the same channel as ${interaction.client.user}`
-                }).catch(() => {}); 
-         }
-                
+         
         try {
             await SlashCommands.run(client, interaction, prefix);
         } catch (error) {
