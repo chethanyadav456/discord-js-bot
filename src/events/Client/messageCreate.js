@@ -64,27 +64,6 @@ module.exports = {
         return message.channel.send({embeds: [embed]});
     }
 
-    const player = message.client.manager.get(message.guild.id);
-
-    if (command.player && !player) {
-        embed.setDescription("There is no player for this guild.");
-        return message.channel.send({embeds: [embed]});
-    }
-
-    if (command.inVoiceChannel && !message.member.voice.channelId) {
-        embed.setDescription("You must be in a voice channel!");
-        return message.channel.send({embeds: [embed]});
-    }
-
-    if (command.sameVoiceChannel) {
-    if(message.guild.me.voice.channel) {
-        if (message.guild.me.voice.channelId !== message.member.voice.channelId) {
-            embed.setDescription(`You must be in the same channel as ${message.client.user}!`);
-            return message.channel.send({embeds: [embed]});
-        }
-    }
-}
-
     try {
         command.execute(message, args, client, prefix);
     } catch (error) {
