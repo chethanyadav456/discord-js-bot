@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js');
+const { EmbedBuilder } = require('discord.js');
 const moment = require('moment');
 
 module.exports = {
@@ -8,7 +8,7 @@ run: async (client, guild) => {
   const channel = client.channels.cache.get(client.config.logs);
   let own = await guild.fetchOwner()
   
-  const embed = new MessageEmbed()
+  const embed = new EmbedBuilder()
     .setThumbnail(guild.iconURL({ dynamic: true, size: 1024}))
     .setTitle(`📤 Left a Guild !!`)
     .addField('Name', `\`${guild.name}\``)
@@ -18,7 +18,7 @@ run: async (client, guild) => {
     .addField('Creation Date', `\`${moment.utc(guild.createdAt).format('DD/MMM/YYYY')}\``)
     .addField(`${client.user.username}'s Server Count`, `\`${client.guilds.cache.size}\` Severs`)
     .setColor(client.embedColor)
-    .setTimestamp()
+    .setTimestamp();
     channel.send({embeds: [embed]});
   }
 }

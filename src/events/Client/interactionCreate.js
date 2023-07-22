@@ -1,4 +1,3 @@
-const { MessageEmbed, Client } = require("discord.js")
 const pre= require("../../models/prefix.js");
 
 module.exports = {

@@ -1,4 +1,4 @@
-const { MessageEmbed, Permissions } = require("discord.js");
+const { EmbedBuilder, Permissions } = require("discord.js");
 const db = require("../../models/prefix.js");
 
 module.exports = {
@@ -14,7 +14,7 @@ module.exports = {
 
     const mention = new RegExp(`^<@!?${client.user.id}>( |)$`);
     if (message.content.match(mention)) {
-      const embed = new MessageEmbed()
+      const embed = new EmbedBuilder()
         .setColor(client.embedColor)
         .setDescription(`**› My prefix in this server is \`${prefix}\`**\n**› You can see my all commands type \`${prefix}\`help**`);
       message.channel.send({embeds: [embed]})
@@ -36,7 +36,7 @@ module.exports = {
 
     if(!message.guild.me.permissions.has(Permissions.FLAGS.EMBED_LINKS)) return await message.channel.send({ content: `I don't have **\`EMBED_LINKS\`** permission to execute this **\`${command.name}\`** command.` }).catch(() => {});
     
-    const embed = new MessageEmbed()
+    const embed = new EmbedBuilder()
         .setColor("RED");
 
     // args: true,

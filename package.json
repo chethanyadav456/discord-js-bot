@@ -1,10 +1,14 @@
 {
-  "name": "v13-handler",
+  "name": "v14-handler",
   "version": "1.0.0",
-  "description": "v13-handler",
+  "description": "v14-handler",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node .",
+    "pm2:start": "pm2 start index.js --name djs_handler",
+    "pm2:stop": "pm2 stop djs_handler",
+    "pm2:restart": "pm2 restart djs_handler",
+    "pm2:list": "pm2 list"
   },
   "repository": {
     "type": "git",
@@ -13,7 +17,7 @@
   "keywords": [
     "discord"
   ],
-  "author": "Raaz#2233",
+  "author": "raaz6",
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.2",
