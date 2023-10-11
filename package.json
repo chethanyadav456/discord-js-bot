@@ -1,10 +1,11 @@
 {
-  "name": "v14-handler",
+  "name": "discord-js-bot",
   "version": "1.0.0",
   "description": "v14-handler",
   "main": "index.js",
   "scripts": {
     "start": "node .",
+    "dev": "nodemon .",
     "pm2:start": "pm2 start index.js --name djs_handler",
     "pm2:stop": "pm2 stop djs_handler",
     "pm2:restart": "pm2 restart djs_handler",
@@ -12,16 +13,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chethanyadav456/v13-discord-handler.git"
+    "url": "git+https://github.com/chethanyadav456/discord-js-bot.git"
   },
   "keywords": [
     "discord"
   ],
-  "author": "raaz6",
+  "author": "raazdev",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^4.1.2",
-    "discord.js": "^13.6.0",
+    "cololog": "^1.0.4",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
     "moment": "^2.29.2",
     "mongoose": "^6.2.10"
   }

@@ -7,3 +7,5 @@ let Prefix = new Schema({
 })
 
 module.exports = model('prefix', Prefix);
+
+/** Template by raazdev | https://github.com/chethanyadav456/discord-js-bot */
